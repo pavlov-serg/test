@@ -38,7 +38,7 @@ $xml=simplexml_load_file("http://www.ecb.europa.eu/stats/eurofxref/eurofxref-dai
 
         $transfer = ($value/$rate_in)*$rate_out;
 
-        echo "<br/>Result: ".round($transfer, 3);
+        echo "<br/>Result: ".$value." ".$val_in." = ".round($transfer, 3)." ".$val_out;
 
     break;
 }
