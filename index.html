@@ -101,7 +101,7 @@
                 var val_in=$('select[name="val_in"]').val();
                 var val_out=$('select[name="val_out"]').val();
                 var value=$('input[name="value"]').val();
-                    if (value != ''){
+                    if (isNumber = /^\d+$/.test(value)){
                         $.ajax({
                         type: "POST",
                         url: "php.php",
@@ -109,7 +109,7 @@
                         cache: false,
                         success: function(responce){ $('#result').html(responce); }
                                                         });
-                                       };
+                                       } else {alert('Not correct "Amount" field!'); $('input[name="value"]').css('border', '3px solid red');  };
                                 };
 
     </script>       
